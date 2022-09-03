@@ -27,6 +27,7 @@ public class CacheController {
         return cacheService.isCacheExist(cacheName);
     }
 
+    //  http://localhost:8080/put?name=appcache&key=data&value=1234567890
     @GetMapping("/put")
     boolean put(@RequestParam(name = "name") String cacheName, @RequestParam String key, @RequestParam String value) {
         CacheService cacheService = applicationContext.getBean(CacheService.class);
