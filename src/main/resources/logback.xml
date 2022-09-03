@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+    <appender name="TOFILE" class="ch.qos.logback.core.FileAppender">
+        <file>hw29.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d - %-5level - %msg%n</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="hillel.hw29log" level="DEBUG">
+        <appender-ref ref="TOFILE"/>
+    </logger>
+
+</configuration>

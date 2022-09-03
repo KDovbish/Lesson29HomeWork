@@ -1,5 +1,8 @@
 package hillel;
 
+/**
+ * Интерфес для управления набором кэшей
+ */
 public interface CacheService {
     void create(String cacheName);
     boolean put(String cacheName, String key, String value);

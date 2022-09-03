@@ -1,16 +1,23 @@
 package hillel;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * Реализация интерфейса CacheService для управления набром кэшей
+ */
 @Component
 public class CacheServiceImpl implements CacheService {
 
     private Map<String, Map<String, String>> cacheset;
+    private Logger logger = LoggerFactory.getLogger("hillel.hw29log");
 
     CacheServiceImpl(){
+        logger.debug("CacheService bean init...");
         cacheset = new HashMap<>();
     }
 
