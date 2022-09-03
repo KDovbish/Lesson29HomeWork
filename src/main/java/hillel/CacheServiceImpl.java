@@ -1,8 +1,11 @@
 package hillel;
 
+import org.springframework.stereotype.Component;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Component
 public class CacheServiceImpl implements CacheService {
 
     private Map<String, Map<String, String>> cacheset;
